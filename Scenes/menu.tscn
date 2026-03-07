@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://iere7p880kjv"]
 
 [ext_resource type="Script" uid="uid://dlrufsiowdvug" path="res://Scripts/menu.gd" id="1_ouk20"]
-[ext_resource type="Theme" uid="uid://detvdevh2dtte" path="res://Assets/kenneyUI-green.tres" id="3_158mb"]
 [ext_resource type="Script" uid="uid://brhdgty18btq3" path="res://Scripts/audio_control.gd" id="3_cayip"]
 [ext_resource type="Script" uid="uid://cqxcn7pwtkj40" path="res://Scripts/fullscreen_button.gd" id="4_jsrd8"]
 [ext_resource type="AudioStream" uid="uid://d4agey23walas" path="res://Assets/Audios/testMusic.ogg" id="4_wwsa2"]
@@ -42,7 +41,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.1200001)
-theme = ExtResource("3_158mb")
 
 [node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=95549041]
 layout_mode = 2

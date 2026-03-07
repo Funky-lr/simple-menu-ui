@@ -4,15 +4,9 @@ extends Control
 @onready var game_titel: Label = $GameTitel
 
 func _ready():
-	#%StartButton.pressed.connect(StartGame)
-	#%QuitButton.pressed.connect(QuitGame)
-	#%SettingsButton.pressed.connect(OpenSettings)
-	## "%" in godot stands for get_node()long version below/needs to be checked on in nodetree
-	# get_node("CenterContainer/VBoxContainer/StartButton").pressed.connect(StartGame())
 	main_buttons.visible = true
 	game_titel.visible = true
 	options_panel.visible = false
-	pass
 	
 func StartGame():
 	#get_tree().change_scene_to_file("Replace with starting scene")
