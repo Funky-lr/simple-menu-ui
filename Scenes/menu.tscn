@@ -241,6 +241,9 @@ bus = &"Music"
 stream = ExtResource("5_jsrd8")
 bus = &"SFX"
 
+[connection signal="pressed" from="CenterContainer/MainButtons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="OptionsPanel/BackButton" to="." method="_on_back_OptionsButton_pressed"]
 [connection signal="value_changed" from="OptionsPanel/MusicSlider" to="OptionsPanel/MusicSlider" method="_on_value_changed"]
 [connection signal="value_changed" from="OptionsPanel/SFXSlider" to="OptionsPanel/SFXSlider" method="_on_value_changed"]

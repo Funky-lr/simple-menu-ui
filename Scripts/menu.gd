@@ -1,13 +1,12 @@
 extends Control
-@onready var v_box_container: VBoxContainer = $CenterContainer/VBoxContainer
 @onready var options_panel: Panel = $OptionsPanel
 @onready var main_buttons: VBoxContainer = $CenterContainer/MainButtons
 @onready var game_titel: Label = $GameTitel
 
 func _ready():
-	%StartButton.pressed.connect(StartGame)
-	%QuitButton.pressed.connect(QuitGame)
-	%SettingsButton.pressed.connect(OpenSettings)
+	#%StartButton.pressed.connect(StartGame)
+	#%QuitButton.pressed.connect(QuitGame)
+	#%SettingsButton.pressed.connect(OpenSettings)
 	## "%" in godot stands for get_node()long version below/needs to be checked on in nodetree
 	# get_node("CenterContainer/VBoxContainer/StartButton").pressed.connect(StartGame())
 	main_buttons.visible = true
@@ -29,3 +28,12 @@ func OpenSettings():
 	
 func _on_back_OptionsButton_pressed() -> void:
 	_ready()
+
+func _on_start_button_pressed() -> void:
+	StartGame()
+
+func _on_settings_button_pressed() -> void:
+	OpenSettings()
+
+func _on_quit_button_pressed() -> void:
+	QuitGame()
