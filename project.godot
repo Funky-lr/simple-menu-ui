@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Simple_Menu_UI"
-run/main_scene="uid://cq1o3pcpdk1lo"
+run/main_scene="uid://iere7p880kjv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [physics]

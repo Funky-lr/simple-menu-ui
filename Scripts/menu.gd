@@ -1,32 +1,16 @@
 extends Control
 
-signal start_game_pressed
-signal quit_game_pressed
-signal options_pressed
 
-@onready var start_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/StartGameButton
-@onready var options_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/OptionsButton
-@onready var quit_button = $CanvasLayer/Control/MarginContainer/VBoxContainer/QuitButton
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	%StartButton.pressed.connect(StartGame)
+	%QuitButton.pressed.connect(QuitGame)
+	## "%" in godot stands for get_node()long version below/needs to be checked on in nodetree
+	# get_node("CenterContainer/VBoxContainer/StartButton").pressed.connect(StartGame())
 	
-	start_button.pressed.connect(_on_start_game_pressed)
-	options_button.pressed.connect(_on_options_pressed)
-	quit_button.pressed.connect(_on_quit_game_pressed)
-	
-	start_button.grab_focus()
-	
-	
-func _process(delta: float) -> void:
+func StartGame():
+	#get_tree().change_scene_to_file("Replace with starting scene")
 	pass
 
-func _on_options_pressed() -> void:
-	options_button.emit()
-
-func _on_quit_game_pressed() -> void:
-	quit_game_pressed.emit()
-
-func _on_start_game_pressed() -> void:
-	start_game_pressed.emit()
+func QuitGame():
+	get_tree().quit()
+	

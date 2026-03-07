@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://cq1o3pcpdk1lo"]
+[gd_scene format=3 uid="uid://iere7p880kjv"]
 
-[ext_resource type="Texture2D" uid="uid://bk2muwpipaq2q" path="res://Assets/black.jpg" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://gwcyg4c8xefa" path="res://Scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://dlrufsiowdvug" path="res://Scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Theme" uid="uid://detvdevh2dtte" path="res://Assets/kenneyUI-green.tres" id="3_158mb"]
 
-[node name="Menu" type="Control" unique_id=674788488]
+[node name="Control" type="Control" unique_id=1950674540]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,59 +12,43 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ouk20")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2134825639]
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1019731952]
-layout_mode = 3
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1050559005]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=2080832916]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_lti8b")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control" unique_id=2062142453]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1791201614]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 358.0
-offset_top = 94.0
-offset_right = -294.0
-offset_bottom = -154.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.92000365, 1.2)
+theme = ExtResource("3_158mb")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer" unique_id=873128145]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=95549041]
 layout_mode = 2
-alignment = 1
 
-[node name="GameTitel" type="Label" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=174399584]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1547450718]
 layout_mode = 2
-text = "\"Game Titel\""
+text = "\"GameTitel\""
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1709991125]
-layout_mode = 2
-
-[node name="StartGameButton" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=1923615177]
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1669103888]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
-[node name="OptionsButton" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=447102491]
+[node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1554007553]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="CanvasLayer/Control/MarginContainer/VBoxContainer" unique_id=2072443608]
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1722343654]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Quit"
-
-[connection signal="options_pressed" from="." to="." method="_on_options_pressed"]
-[connection signal="quit_game_pressed" from="." to="." method="_on_quit_game_pressed"]
-[connection signal="start_game_pressed" from="." to="." method="_on_start_game_pressed"]
+text = "Quit Game"
