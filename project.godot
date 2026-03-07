@@ -13,7 +13,6 @@ config_version=5
 config/name="Simple_Menu_UI"
 run/main_scene="uid://cq1o3pcpdk1lo"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [physics]
 

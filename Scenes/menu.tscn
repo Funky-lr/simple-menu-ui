@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cq1o3pcpdk1lo"]
 
-[ext_resource type="Texture2D" uid="uid://bk2muwpipaq2q" path="res://black.jpg" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://gwcyg4c8xefa" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://bk2muwpipaq2q" path="res://Assets/black.jpg" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://gwcyg4c8xefa" path="res://Scripts/menu.gd" id="1_ouk20"]
 
 [node name="Menu" type="Control" unique_id=674788488]
 layout_mode = 3
