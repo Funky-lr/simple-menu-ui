@@ -14,6 +14,15 @@ config/name="Simple_Menu_UI"
 run/main_scene="uid://iere7p880kjv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="uid://cann50fcxk5ki"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
