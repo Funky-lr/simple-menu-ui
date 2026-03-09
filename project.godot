@@ -13,6 +13,7 @@ config_version=5
 config/name="Simple_Menu_UI"
 run/main_scene="uid://iere7p880kjv"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/tags=PackedStringArray("system_template")
 
 [audio]
 
