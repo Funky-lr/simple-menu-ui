@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Simple_Menu_UI"
-run/main_scene="uid://iere7p880kjv"
-config/features=PackedStringArray("4.6", "Forward Plus")
 config/tags=PackedStringArray("system_template")
+run/main_scene="uid://iere7p880kjv"
+config/features=PackedStringArray("4.7", "Forward Plus")
 
 [audio]
 
-buses/default_bus_layout="uid://cann50fcxk5ki"
+buses/default_bus_layout=""
+
+[autoload]
+
+BusManager="*uid://dg0db7gklr7e0"
 
 [display]
 
@@ -27,9 +31,9 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
-"res://Assets/": "purple",
-"res://Scenes/": "orange",
-"res://Scripts/": "red"
+"res://addons/": "yellow",
+"res://addons/main_menu_template/Scenes/": "orange",
+"res://addons/main_menu_template/Scripts/": "red"
 }
 
 [physics]
