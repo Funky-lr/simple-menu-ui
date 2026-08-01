@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://brhdgty18btq3" path="res://addons/main_menu_template/Scripts/audio_control.gd" id="2_hrkgg"]
 [ext_resource type="Script" uid="uid://cqxcn7pwtkj40" path="res://addons/main_menu_template/Scripts/fullscreen_button.gd" id="3_rmdlp"]
 [ext_resource type="Script" uid="uid://cy6rc1j3kv8xa" path="res://addons/main_menu_template/Scripts/scale_resolution_control.gd" id="4_uuu5f"]
+[ext_resource type="Script" uid="uid://tnk5q2egcdfq" path="res://addons/main_menu_template/Scripts/test_music.gd" id="5_l8hcb"]
+[ext_resource type="Script" uid="uid://dilo5wcot4xij" path="res://addons/main_menu_template/Scenes/test_sfx.gd" id="6_1j52f"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_xhh6f"]
 color = Color(1, 1, 1, 1)
@@ -231,10 +233,10 @@ script = ExtResource("4_uuu5f")
 
 [node name="TestMusic" type="AudioStreamPlayer" parent="." unique_id=1341049314]
 autoplay = true
-bus = &"Music"
+script = ExtResource("5_l8hcb")
 
 [node name="TestSFX" type="AudioStreamPlayer" parent="." unique_id=1130952877]
-bus = &"SFX"
+script = ExtResource("6_1j52f")
 
 [connection signal="pressed" from="CenterContainer/MainButtons/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
